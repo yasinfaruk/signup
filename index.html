@@ -1,0 +1,92 @@
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Forms</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/demo.css">
+        <link rel="stylesheet" href="css/sky-forms.css">
+        <!--<script src="js/index.js" type="text/javascript"></script>-->
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="http://jqueryvalidation.org/files/demo/site-demos.css">
+        <style>
+            .label{
+                color: #232323;
+                font-size: 15px;
+                font-family: arial;
+                font-weight: normal;
+            }
+        </style>
+
+    </head>
+    <body class="bg-cyan">
+        <div class="body body-s">
+
+            <form action="" class="sky-form">
+                <header>Login form</header>
+
+                <fieldset>					
+                    <section>
+                        <div class="row">
+                            <label class="label col col-4">Username</label>
+                            <div class="col col-8">
+                                <label class="input">
+                                    <!--<i class="icon-append icon-user"></i>-->
+                                    <input type="text" name="username" class="username" placeholder="Type username">
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="row">
+                            <label class="label col col-4">Password</label>
+                            <div class="col col-8">
+                                <label class="input">
+                                    <!--<i class="icon-append icon-lock"></i>-->
+                                    <input type="password" name="password" placeholder="Type password">
+                                </label>
+                                <!--<div class="note"><a href="#">Forgot password?</a></div>-->
+                            </div>
+                        </div>
+                    </section>
+
+                </fieldset>
+                <footer>
+                    <button type="submit" class="button" id="submit">Log in</button>
+                    <a href="registration.html" target="_blank" class="button button-secondary">Register</a>
+                </footer>
+            </form>
+
+        </div>
+
+        <script>
+             $(document).ready(function (){
+                $("#submit").click(function (){
+                    formValidation();
+                });
+                
+                function formValidation(){
+                    
+                    var email = $(".username").val();
+                    
+                    if(email == "xyz"){
+                       window.location.href = "http://stackoverflow.com";
+                       
+                       
+                    }else{
+                         alert("write the correct username.");
+                    }
+                    
+                    
+                }
+                
+            });
+        </script>
+
+
+    </body>
+</html>

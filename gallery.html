@@ -1,0 +1,120 @@
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Gallery</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/demo.css">
+        <link rel="stylesheet" href="css/sky-forms.css">
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <!--<script src="js/index.js" type="text/javascript"></script>-->
+
+        <style>
+            body{
+                margin: 0 auto;
+            }
+            .main{
+                /*border: 1px solid grey;*/
+                min-height: 500px;
+                width: 100%;
+                margin-top: 30px;
+                overflow: hidden;
+                border-right: 1px solid whitesmoke;
+                border-left: 1px solid whitesmoke;
+                border-bottom: 1px solid whitesmoke;
+            }
+            .navbar{
+                text-align: center;
+                /*background-color: white;*/
+                /*opacity: 0.1;*/
+                padding: 10px;
+                background: rgba(248,248,248,.9);
+                border: 1px solid whitesmoke;
+            }
+            .navbar a{
+                color: #232323;
+                font-size: 17px;
+                text-decoration: none;
+                padding: 0 30px;
+                font-family: sans-serif,arial;
+                font-weight: normal;
+            }
+            .navbar a:hover{
+                /*color: white;*/
+            }
+            img{
+                height: 150px;
+                overflow: hidden;
+                width: 200px;
+                margin: 12px;
+                border: 8px solid white;
+                box-shadow: 3px 4px 11px #232323;
+            }
+        </style>
+
+    </head>
+    <body class="bg-cyan">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="main">
+                    <div class="row">
+                        <nav class="navbar">
+                            <a href="#" id="all">All</a>
+                            <a href="#" id="web">web design</a>
+                            <a href="#" id="temp">template</a>
+                            <a href="#" id="graphic">graphics design</a>
+                        </nav>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4"><img class="graphic" src="image/1.jpg"></div>
+                        <div class="col-md-4" ><img class="web" src="image/2.jpg"></div>
+                        <div class="col-md-4" ><img class="temp" src="image/3.jpg"></div>
+                        <div class="col-md-4" ><img class="temp" src="image/4.jpg"></div>
+                        <div class="col-md-4" ><img class="web" src="image/5.jpg"></div>
+                        <div class="col-md-4" ><img class="graphic" src="image/6.jpg"></div>
+                        <div class="col-md-4" ><img class="web" src="image/7.jpg"></div>
+                        <div class="col-md-4" ><img class="graphic" src="image/8.jpg"></div>
+                        <div class="col-md-4" ><img class="temp" src="image/9.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+
+
+                $("#web").click(function () {
+                    $(".web").show(3000);
+                    $(".temp").hide(2000);
+                    $(".graphic").hide(2000);
+
+                });
+                $("#temp").click(function () {
+                    $(".temp").show(3000);
+                    $(".web").hide(2000);
+                    $(".graphic").hide(2000);
+                });
+                $("#graphic").click(function () {
+                    $(".graphic").show(3000);
+                    $(".temp").hide(2000);
+                    $(".web").hide(2000);
+                });
+                $("#all").click(function () {
+                    $(".web").show(3000);
+                    $(".temp").show(3000);
+                    $(".graphic").show(3000);
+                });
+
+            });
+        </script>
+
+
+    </body>
+</html>

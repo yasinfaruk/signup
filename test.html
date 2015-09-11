@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>test</title>
+         <script src="js/jquery.min .js" type="text/javascript"></script> 
+         <style>
+             .red{
+                background: #fffdf8;
+                /*border: 1px solid red;*/
+                padding: 5px 10px;
+                margin: 0px 5px;
+                color: red;
+                font-size: 15px;
+            }
+            .orange{
+                background: #fff791;
+                /*border: 1px solid red;*/
+                padding: 5px 10px;
+                margin: 0px 5px;
+                color: black;
+                font-size: 15px;
+            }
+            .green{
+                background: #ccffcc;
+                /*border: 1px solid red;*/
+                padding: 5px 10px;
+                margin: 0px 5px;
+                color: black;
+                font-size: 15px;
+         </style>
+    </head>
+    <body>
+
+        <label>password</label>
+        <input type="password" id="password">
+        <p class="pass-strength"></p>
+        <script>
+           $(document).ready(function (){
+                $("#password").keyup(function () {
+
+                        var count = $(this).value().length;
+
+                        if (count < 1) {
+                            $(".pass-strength").text("");
+                            $(".pass-strength").removeClass();
+                        } else if (count < 6) {
+                            $(".pass-strength").text("Your password strength is: Week");
+                            $(".pass-strength").addClass("red");
+                            $(".pass-strength").removeClass("green");
+                            $(".pass-strength").removeClass("orange");
+                        } else if (count < 10) {
+                            $(".pass-strength").text("Your password strength is: Good");
+                            $(".pass-strength").addClass("orange");
+                            $(".pass-strength").removeClass("red");
+                            $(".pass-strength").removeClass("green");
+                        } else {
+                            $(".pass-strength").text("Your password strength is: Strong");
+                            $(".pass-strength").addClass("green");
+                            $(".pass-strength").removeClass("orange");
+                            $(".pass-strength").removeClass("red");
+                        }
+                    });
+           });
+        </script>
+    </body>
+</html>
